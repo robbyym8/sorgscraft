@@ -3,6 +3,8 @@ package dev.blythefn.sorgscraft.item;
 import dev.blythefn.sorgscraft.sorgscraft;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,7 +18,7 @@ public class Moditems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)));
 
     public static final RegistryObject<Item> THE_GAP = ITEMS.register("the_gap",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)));
+            () -> new ArmorItem(ModArmorMaterials.GAP, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)));
 
     public static final RegistryObject<Item> GREASE_DROP = ITEMS.register("grease_drop",
     () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)));
