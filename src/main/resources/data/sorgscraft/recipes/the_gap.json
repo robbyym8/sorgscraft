@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      "X X"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:netherite_ingot"
+      },
+      "X": {
+        "item": "sorgscraft:tooth_of_the_goblin"
+      }
+    },
+    "result": {
+      "item": "sorgscraft:the_gap",
+      "count": 1
+    }
+  }
