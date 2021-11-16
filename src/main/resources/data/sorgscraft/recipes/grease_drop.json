@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "sorgscraft:grease_block"
+        }
+    ],
+    "result": {
+      "item": "sorgscraft:grease_drop",
+      "count": 9
+    }
+  }

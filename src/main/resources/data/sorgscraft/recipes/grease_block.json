@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      "###",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "sorgscraft:grease_drop"
+      }
+    },
+    "result": {
+      "item": "sorgscraft:grease_block",
+      "count": 1
+    }
+  }

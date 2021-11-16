@@ -18,6 +18,9 @@ public class Moditems {
     public static final RegistryObject<Item> THE_GAP = ITEMS.register("the_gap",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)));
 
+    public static final RegistryObject<Item> GREASE_DROP = ITEMS.register("grease_drop",
+    () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

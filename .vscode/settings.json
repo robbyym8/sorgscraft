@@ -1,4 +1,5 @@
 {
     "git.ignoreLimitWarning": true,
-    "java.dependency.packagePresentation": "hierarchical"
+    "java.dependency.packagePresentation": "hierarchical",
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
