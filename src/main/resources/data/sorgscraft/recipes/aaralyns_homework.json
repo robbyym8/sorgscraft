@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "XXX",
+      "X#X",
+      "XXX"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:paper"
+      },
+      "X": {
+        "item": "minecraft:dirt"
+      }
+    },
+    "result": {
+      "item": "sorgscraft:aaralyns_homework",
+      "count": 1
+    }
+  }
