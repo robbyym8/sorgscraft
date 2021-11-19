@@ -1,11 +1,31 @@
 {
   "item.sorgscraft.tooth_of_the_goblin": "Tooth Of The Goblin",
 
-  "item.sorgscraft.the_gap": "The Gap...",
+  "item.sorgscraft.the_gap": "The Gap",
+
+  "tooltip.item.sorgscraft.the_gap": "§8The Legendary Gap is rumored to be 5mm wide",
+
+  "tooltip.item.sorgscraft.the_gap_effects": "§5Grants Speed, Strength, and Night Vision while wearing",
 
   "item.sorgscraft.grease_drop": "Drop of Grease",
 
   "item.sorgscraft.aaralyns_homework": "Aaralyn's Homework",
+
+  "item.sorgscraft.adderall": "Adderall",
+
+  "tooltip.item.sorgscraft.adderall": "§8Adderall stolen directly from Blythe's stash",
+
+  "tooltip.item.sorgscraft.adderall_effects": "§5Grants Speed II, Haste III, and Regeneration II for 10 minutes",
+
+  "item.sorgscraft.tinder": "Rob's Tinder",
+
+  "tooltip.item.sorgscraft.tinder": "§8Summons Rob's matches on Tinder (3 uses)",
+
+  "item.sorgscraft.robs_hand": "Rob's Shit Covered Hand",
+
+  "item.sorgscraft.faith_milk": "Faith's Milk",
+
+  "item.sorgscraft.ava_milk": "Ava's Milk",
 
   "block.sorgscraft.grease_block": "Grease Block",
 
