@@ -31,11 +31,7 @@ public class Milk extends Item {
    }
 
    public int getUseDuration(ItemStack pStack) {
-      return 32;
-   }
-
-   public UseAnim getUseAnimation(ItemStack pStack) {
-      return UseAnim.DRINK;
+      return 1;
    }
 
    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pHand) {

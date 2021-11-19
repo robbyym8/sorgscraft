@@ -3,6 +3,7 @@ package dev.blythefn.sorgscraft.item;
 import java.util.List;
 
 import dev.blythefn.sorgscraft.sorgscraft;
+import dev.blythefn.sorgscraft.item.custom.Adderall;
 import dev.blythefn.sorgscraft.item.custom.GapEffects;
 import dev.blythefn.sorgscraft.item.custom.Milk;
 import dev.blythefn.sorgscraft.item.custom.RobsHand;
@@ -49,7 +50,7 @@ public class Moditems {
     () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)));
 
     public static final RegistryObject<Item> ADDERALL = ITEMS.register("adderall",
-    () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).food(new FoodProperties.Builder().nutrition(1).saturationMod(0.1f).effect(new MobEffectInstance(MobEffects.DIG_SPEED, 12000, 2), 1).effect(new MobEffectInstance(MobEffects.REGENERATION, 12000, 1), 1).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 12000, 1), 1).build())) {
+    () -> new Adderall(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)) {
         @Override
         public void appendHoverText(ItemStack pStack, Level pLevel, List<net.minecraft.network.chat.Component> tooltip, TooltipFlag pIsAdvanced) {
         super.appendHoverText(pStack, pLevel, tooltip, pIsAdvanced);
