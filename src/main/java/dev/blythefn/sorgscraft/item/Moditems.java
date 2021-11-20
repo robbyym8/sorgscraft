@@ -2,12 +2,16 @@ package dev.blythefn.sorgscraft.item;
 
 import java.util.List;
 
+import org.apache.commons.lang3.ObjectUtils.Null;
+
 import dev.blythefn.sorgscraft.sorgscraft;
 import dev.blythefn.sorgscraft.item.custom.Adderall;
+import dev.blythefn.sorgscraft.item.custom.Curry;
 import dev.blythefn.sorgscraft.item.custom.GapEffects;
 import dev.blythefn.sorgscraft.item.custom.Milk;
 import dev.blythefn.sorgscraft.item.custom.RobsHand;
 import dev.blythefn.sorgscraft.item.custom.Tinder;
+import dev.blythefn.sorgscraft.item.custom.Vape;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
@@ -73,10 +77,16 @@ public class Moditems {
     () -> new RobsHand(ModItemTier.ROB, 1, -2.4f, new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(1).durability(1000)));
 
     public static final RegistryObject<Item> FAITH_MILK = ITEMS.register("faith_milk",
-    () -> new Milk(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(16)));
+    () -> new Milk(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationMod(0.8F).build())));
 
     public static final RegistryObject<Item> AVA_MILK = ITEMS.register("ava_milk",
-    () -> new Milk(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(16)));
+    () -> new Milk(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationMod(0.8F).build())));
+
+    public static final RegistryObject<Item> CURRY = ITEMS.register("curry",
+    () -> new Curry(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)));
+
+    public static final RegistryObject<Item> VAPE = ITEMS.register("vape",
+    () -> new Vape(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

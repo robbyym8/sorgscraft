@@ -5,6 +5,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -21,7 +23,11 @@ public class Milk extends Item {
     }
 
    public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pEntityLiving) {
-      if (!pLevel.isClientSide) pEntityLiving.removeAllEffects(); // FORGE - move up so stack.shrink does not turn stack into air
+      if (!pLevel.isClientSide) {
+         pEntityLiving.removeEffect(MobEffects.CONFUSION);
+         pEntityLiving.removeEffect(MobEffects.POISON);
+         pEntityLiving.addEffect(new MobEffectInstance(MobEffects.SATURATION, 1, 4, true, false, false));
+      };
 
       if (pEntityLiving instanceof Player && !((Player)pEntityLiving).getAbilities().instabuild) {
          pStack.shrink(1);
@@ -31,7 +37,11 @@ public class Milk extends Item {
    }
 
    public int getUseDuration(ItemStack pStack) {
-      return 1;
+      return 16;
+   }
+
+   public UseAnim getUseAnimation(ItemStack pStack) {
+      return UseAnim.DRINK;
    }
 
    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pHand) {
