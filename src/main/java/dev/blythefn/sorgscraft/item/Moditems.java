@@ -77,10 +77,10 @@ public class Moditems {
     () -> new RobsHand(ModItemTier.ROB, 1, -2.4f, new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(1).durability(1000)));
 
     public static final RegistryObject<Item> FAITH_MILK = ITEMS.register("faith_milk",
-    () -> new Milk(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationMod(0.8F).build())));
+    () -> new Milk(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(64).food(new FoodProperties.Builder().nutrition(8).saturationMod(0.8F).build())));
 
     public static final RegistryObject<Item> AVA_MILK = ITEMS.register("ava_milk",
-    () -> new Milk(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(16).food(new FoodProperties.Builder().nutrition(8).saturationMod(0.8F).build())));
+    () -> new Milk(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(64).food(new FoodProperties.Builder().nutrition(8).saturationMod(0.8F).build())));
 
     public static final RegistryObject<Item> CURRY = ITEMS.register("curry",
     () -> new Curry(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)));
