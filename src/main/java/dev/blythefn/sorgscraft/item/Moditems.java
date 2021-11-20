@@ -86,7 +86,7 @@ public class Moditems {
     () -> new Curry(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)));
 
     public static final RegistryObject<Item> VAPE = ITEMS.register("vape",
-    () -> new Vape(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(1)));
+    () -> new Vape(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(1).durability(300)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
