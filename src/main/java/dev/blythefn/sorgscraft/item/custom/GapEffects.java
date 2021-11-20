@@ -20,6 +20,7 @@ public class GapEffects extends ArmorItem implements IForgeItem {
     @Override
     public void onArmorTick(ItemStack stack, Level level, Player player) {
         if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == Moditems.THE_GAP.get()) {
+            player.removeEffect(MobEffects.CONFUSION);
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 201, 0, true, false, false));
             player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 201, 0, true, false, false));
             player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 201, 0, true, false, false));
