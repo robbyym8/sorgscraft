@@ -11,7 +11,7 @@ import net.minecraft.item.crafting.Ingredient;
 
 public enum ModArmorMaterials implements IArmorMaterial {
     GAP("gap", 37, new int[]{5, 7, 9, 3}, 12, SoundEvents.ARMOR_EQUIP_IRON, 1.0f, 0.0f, () -> {
-        return Ingredient.of(Moditems.TOOTH_OF_THE_GOBLIN.get());
+        return Ingredient.of(ModItems.TOOTH_OF_THE_GOBLIN.get());
     });
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};

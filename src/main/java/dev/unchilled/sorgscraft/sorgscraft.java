@@ -1,7 +1,7 @@
 package dev.unchilled.sorgscraft;
 
 import dev.unchilled.sorgscraft.block.ModBlocks;
-import dev.unchilled.sorgscraft.item.Moditems;
+import dev.unchilled.sorgscraft.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -17,7 +17,7 @@ public class sorgscraft
     public sorgscraft() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        Moditems.register(eventBus);
+        ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);

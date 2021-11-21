@@ -9,7 +9,7 @@ import net.minecraft.item.crafting.Ingredient;
 public enum ModItemTier implements IItemTier {
 
     ROB(3, 500, 8.0F, -5.0F, 10, () -> {
-        return Ingredient.of(Moditems.TINDER.get());
+        return Ingredient.of(ModItems.TINDER.get());
     });
 
     private final int level;

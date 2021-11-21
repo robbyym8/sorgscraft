@@ -1,7 +1,7 @@
 package dev.unchilled.sorgscraft.block;
 
 import dev.unchilled.sorgscraft.item.ModCreativeModeTab;
-import dev.unchilled.sorgscraft.item.Moditems;
+import dev.unchilled.sorgscraft.item.ModItems;
 import dev.unchilled.sorgscraft.sorgscraft;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -29,7 +29,7 @@ public static final RegistryObject<Block> GREASE_BLOCK = registerBlock("grease_b
     }
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        Moditems.ITEMS.register(name, () -> new BlockItem(block.get(),
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)));
     }
 
