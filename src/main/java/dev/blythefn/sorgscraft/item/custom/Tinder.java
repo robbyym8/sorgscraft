@@ -25,7 +25,6 @@ public class Tinder extends Item {
             victim.moveTo(blockpos.above(), 0, 0);
             victim.setCustomName(new TextComponent("Victim"));
             victim.setCustomNameVisible(true);
-            victim.ageUp(1000000000);
             level.addFreshEntity(victim);
             pContext.getItemInHand().hurtAndBreak(1, pContext.getPlayer(), p -> {
                 p.broadcastBreakEvent(pContext.getHand());
