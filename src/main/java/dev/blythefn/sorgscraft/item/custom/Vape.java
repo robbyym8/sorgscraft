@@ -20,8 +20,8 @@ public class Vape extends Item {
 
     public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pEntityLiving) {
         if (!pLevel.isClientSide) {
-            pEntityLiving.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 400, 0, true, false, false));
-            pEntityLiving.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 400, 0, true, false, false));
+            pEntityLiving.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 600, 0, true, false, false));
+            pEntityLiving.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 600, 0, true, false, false));
             pStack.hurtAndBreak(1, ((Player)pEntityLiving), p -> {
                 p.broadcastBreakEvent(pEntityLiving.getUsedItemHand());
             });

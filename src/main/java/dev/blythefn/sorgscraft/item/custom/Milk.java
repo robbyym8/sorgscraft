@@ -24,8 +24,8 @@ public class Milk extends Item {
          pEntityLiving.removeEffect(MobEffects.SLOW_FALLING);
          if(pEntityLiving.hasEffect(MobEffects.LEVITATION)) {
             pEntityLiving.removeEffect(MobEffects.LEVITATION);
-            pEntityLiving.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 400, 0, true, false, false));
-            pEntityLiving.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 400, 0, true, false, false));
+            pEntityLiving.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 600, 0, true, false, false));
+            pEntityLiving.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 600, 0, true, false, false));
          } else {
             pEntityLiving.removeEffect(MobEffects.CONFUSION);
          };
