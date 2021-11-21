@@ -1,7 +1,7 @@
-package dev.blythefn.sorgscraft;
+package dev.unchilled.sorgscraft;
 
-import dev.blythefn.sorgscraft.block.ModBlocks;
-import dev.blythefn.sorgscraft.item.Moditems;
+import dev.unchilled.sorgscraft.block.ModBlocks;
+import dev.unchilled.sorgscraft.item.Moditems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;

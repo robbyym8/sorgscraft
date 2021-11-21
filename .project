@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>SorgsCraft</name>
-	<comment>Project SorgsCraft created by Buildship.</comment>
+	<name>SorgsCraft 1.16.5</name>
+	<comment>Project SorgsCraft 1.16.5 created by Buildship.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -22,7 +22,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1637024301987</id>
+			<id>1637472256622</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
