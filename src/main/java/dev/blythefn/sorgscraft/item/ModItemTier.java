@@ -6,6 +6,8 @@ import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
+@SuppressWarnings( "deprecation" )
+
 public enum ModItemTier implements Tier {
 
     ROB(3, 500, 8.0F, -5.0F, 10, () -> {

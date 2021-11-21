@@ -9,6 +9,8 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
 
+@SuppressWarnings("deprecation")
+
 public enum ModArmorMaterials implements ArmorMaterial {
     GAP("gap", 37, new int[]{5, 7, 9, 3}, 12, SoundEvents.ARMOR_EQUIP_IRON, 1.0f, 0.0f, () -> {
         return Ingredient.of(Moditems.TOOTH_OF_THE_GOBLIN.get());
