@@ -43,4 +43,10 @@ public class Curry extends Item {
         return ItemUtils.startUsingInstantly(pLevel, pPlayer, pHand);
     }
 
+    @Override
+    public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
+        pTarget.setSecondsOnFire(20);
+        return super.hurtEnemy(pStack, pTarget, pAttacker);
+    }
+
 }
