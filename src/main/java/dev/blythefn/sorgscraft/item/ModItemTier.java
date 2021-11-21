@@ -30,37 +30,31 @@ public enum ModItemTier implements Tier {
 
     @Override
     public int getUses() {
-        // TODO Auto-generated method stub
         return level;
     }
 
     @Override
     public float getSpeed() {
-        // TODO Auto-generated method stub
         return uses;
     }
 
     @Override
     public float getAttackDamageBonus() {
-        // TODO Auto-generated method stub
         return speed;
     }
 
     @Override
     public int getLevel() {
-        // TODO Auto-generated method stub
         return (int) damage;
     }
 
     @Override
     public int getEnchantmentValue() {
-        // TODO Auto-generated method stub
         return enchantmentValue;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        // TODO Auto-generated method stub
         return repairIngredient.get();
     }
     

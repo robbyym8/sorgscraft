@@ -2,7 +2,6 @@ package dev.blythefn.sorgscraft.item;
 import java.util.function.Supplier;
 
 import dev.blythefn.sorgscraft.sorgscraft;
-import dev.blythefn.sorgscraft.item.Moditems;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;

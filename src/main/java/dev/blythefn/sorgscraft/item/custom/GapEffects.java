@@ -9,10 +9,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.extensions.IForgeItem;
 
-public class GapEffects extends ArmorItem implements IForgeItem {
-
+public class GapEffects extends ArmorItem {
+    
     public GapEffects(Properties pProperties) {
         super(ModArmorMaterials.GAP, EquipmentSlot.HEAD, pProperties);
     }

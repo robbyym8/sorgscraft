@@ -4,7 +4,6 @@ import dev.blythefn.sorgscraft.item.ModCreativeModeTab;
 import dev.blythefn.sorgscraft.item.Moditems;
 import dev.blythefn.sorgscraft.sorgscraft;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -23,19 +22,6 @@ public class ModBlocks<MOD_ID> {
 public static final RegistryObject<Block> GREASE_BLOCK = registerBlock("grease_block",
         () -> new Block(BlockBehaviour.Properties.of(Material.ICE).strength(4f)));
 
-    private static void registerBlock(String grease_block) {
-    }
-
-    private static<T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn, tab);
-        return toReturn;
-    }
-
-    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
-        Moditems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(tab)));
-    }
     private static<T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

@@ -2,8 +2,6 @@ package dev.blythefn.sorgscraft.item;
 
 import java.util.List;
 
-import org.apache.commons.lang3.ObjectUtils.Null;
-
 import dev.blythefn.sorgscraft.sorgscraft;
 import dev.blythefn.sorgscraft.item.custom.Adderall;
 import dev.blythefn.sorgscraft.item.custom.Curry;
@@ -12,16 +10,11 @@ import dev.blythefn.sorgscraft.item.custom.Milk;
 import dev.blythefn.sorgscraft.item.custom.RobsHand;
 import dev.blythefn.sorgscraft.item.custom.Tinder;
 import dev.blythefn.sorgscraft.item.custom.Vape;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraft.client.renderer.EffectInstance;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraftforge.eventbus.api.IEventBus;
