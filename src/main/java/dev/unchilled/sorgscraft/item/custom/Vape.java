@@ -18,8 +18,8 @@ public class Vape extends Item {
         super(pProperties);
     }
 
-    public ItemStack finishUsingItem(ItemStack pStack, World pLevel, LivingEntity pEntityLiving) {
-        if (!pLevel.isClientSide) {
+    public ItemStack finishUsingItem(ItemStack pStack, World pWorld, LivingEntity pEntityLiving) {
+        if (!pWorld.isClientSide) {
             pEntityLiving.addEffect(new EffectInstance(Effects.CONFUSION, 600, 0, true, false, false));
             pEntityLiving.addEffect(new EffectInstance(Effects.LEVITATION, 600, 0, true, false, false));
             pStack.hurtAndBreak(1, ((PlayerEntity)pEntityLiving), p -> {
@@ -38,8 +38,8 @@ public class Vape extends Item {
         return UseAction.DRINK;
     }
 
-    public ActionResult<ItemStack> use(World pLevel, PlayerEntity pPlayer, Hand pHand) {
-        return DrinkHelper.useDrink(pLevel, pPlayer, pHand);
+    public ActionResult<ItemStack> use(World pWorld, PlayerEntity pPlayer, Hand pHand) {
+        return DrinkHelper.useDrink(pWorld, pPlayer, pHand);
     }
     
 }

@@ -19,8 +19,8 @@ public class Adderall extends Item {
         super(pProperties);
     }
 
-    public ItemStack finishUsingItem(ItemStack pStack, World pLevel, LivingEntity pEntityLiving) {
-        if (!pLevel.isClientSide) {
+    public ItemStack finishUsingItem(ItemStack pStack, World pWorld, LivingEntity pEntityLiving) {
+        if (!pWorld.isClientSide) {
             pEntityLiving.forceAddEffect(new EffectInstance(Effects.MOVEMENT_SPEED, 12000, 1, true, false, false));
             pEntityLiving.forceAddEffect(new EffectInstance(Effects.DIG_SPEED, 12000, 2, true, false, false));
             pEntityLiving.forceAddEffect(new EffectInstance(Effects.REGENERATION, 12000, 1, true, false, false));
@@ -41,8 +41,8 @@ public class Adderall extends Item {
         return UseAction.EAT;
     }
 
-    public ActionResult<ItemStack> use(World pLevel, PlayerEntity pPlayer, Hand pHand) {
-        return DrinkHelper.useDrink(pLevel, pPlayer, pHand);
+    public ActionResult<ItemStack> use(World pWorld, PlayerEntity pPlayer, Hand pHand) {
+        return DrinkHelper.useDrink(pWorld, pPlayer, pHand);
     }
 
 }

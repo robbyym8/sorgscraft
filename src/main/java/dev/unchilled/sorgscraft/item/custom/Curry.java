@@ -16,8 +16,8 @@ public class Curry extends Item {
         super(pProperties);
     }
     
-    public ItemStack finishUsingItem(ItemStack pStack, World pLevel, LivingEntity pEntityLiving) {
-        if (!pLevel.isClientSide) {
+    public ItemStack finishUsingItem(ItemStack pStack, World pWorld, LivingEntity pEntityLiving) {
+        if (!pWorld.isClientSide) {
             if(pEntityLiving instanceof PlayerEntity)
                 {
                     ((PlayerEntity)pEntityLiving).setSecondsOnFire(20);
@@ -39,8 +39,8 @@ public class Curry extends Item {
         return UseAction.EAT;
     }
 
-    public ActionResult<ItemStack> use(World pLevel, PlayerEntity pPlayer, Hand pHand) {
-        return DrinkHelper.useDrink(pLevel, pPlayer, pHand);
+    public ActionResult<ItemStack> use(World pWorld, PlayerEntity pPlayer, Hand pHand) {
+        return DrinkHelper.useDrink(pWorld, pPlayer, pHand);
     }
 
     @Override

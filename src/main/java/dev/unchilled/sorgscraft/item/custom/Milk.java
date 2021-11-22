@@ -18,8 +18,8 @@ public class Milk extends Item {
         super(pProperties);
     }
 
-   public ItemStack finishUsingItem(ItemStack pStack, World pLevel, LivingEntity pEntityLiving) {
-      if (!pLevel.isClientSide) {
+   public ItemStack finishUsingItem(ItemStack pStack, World pWorld, LivingEntity pEntityLiving) {
+      if (!pWorld.isClientSide) {
          pEntityLiving.removeEffect(Effects.POISON);
          pEntityLiving.removeEffect(Effects.SLOW_FALLING);
          if(pEntityLiving.hasEffect(Effects.LEVITATION)) {
@@ -47,7 +47,7 @@ public class Milk extends Item {
       return UseAction.DRINK;
    }
 
-   public ActionResult <ItemStack> use(World pLevel, PlayerEntity pPlayer, Hand pHand) {
-      return DrinkHelper.useDrink(pLevel, pPlayer, pHand);
+   public ActionResult <ItemStack> use(World pWorld, PlayerEntity pPlayer, Hand pHand) {
+      return DrinkHelper.useDrink(pWorld, pPlayer, pHand);
    }
 }

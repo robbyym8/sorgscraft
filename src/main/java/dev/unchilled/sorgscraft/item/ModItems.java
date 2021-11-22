@@ -41,11 +41,11 @@ public class ModItems {
     public static final RegistryObject<Item> ADDERALL = ITEMS.register("adderall",
     () -> new Adderall(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)) {
         @Override
-        public void appendHoverText(ItemStack pStack, World pLevel, List<ITextComponent> tooltip, ITooltipFlag pIsAdvanced) {
+        public void appendHoverText(ItemStack pStack, World pWorld, List<ITextComponent> tooltip, ITooltipFlag pIsAdvanced) {
         tooltip.add(new TranslationTextComponent("tooltip.item.sorgscraft.adderall"));
         tooltip.add(new StringTextComponent(""));
         tooltip.add(new TranslationTextComponent("tooltip.item.sorgscraft.adderall_effects"));
-        super.appendHoverText(pStack, pLevel, tooltip, pIsAdvanced);
+        super.appendHoverText(pStack, pWorld, tooltip, pIsAdvanced);
         }
     });
 

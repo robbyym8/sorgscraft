@@ -17,7 +17,7 @@ public class GapEffects extends ArmorItem {
     }
 
     @Override
-    public void onArmorTick(ItemStack stack, World level, PlayerEntity player) {
+    public void onArmorTick(ItemStack stack, World world, PlayerEntity player) {
         if (player.getItemBySlot(EquipmentSlotType.HEAD).getItem() == ModItems.THE_GAP.get()) {
             player.removeEffect(Effects.CONFUSION);
             player.addEffect(new EffectInstance(Effects.MOVEMENT_SPEED, 201, 0, true, false, false));
