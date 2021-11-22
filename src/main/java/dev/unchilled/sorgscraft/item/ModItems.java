@@ -52,9 +52,9 @@ public class ModItems {
     public static final RegistryObject<Item> TINDER = ITEMS.register("tinder",
     () -> new Tinder(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(1).durability(3)) {
         @Override
-        public void appendHoverText(ItemStack pStack, World pLevel, List<ITextComponent> tooltip, ITooltipFlag pIsAdvanced) {
+        public void appendHoverText(ItemStack pStack, World pWorld, List<ITextComponent> tooltip, ITooltipFlag pIsAdvanced) {
         tooltip.add(new TranslationTextComponent("tooltip.item.sorgscraft.tinder"));
-        super.appendHoverText(pStack, pLevel, tooltip, pIsAdvanced);
+        super.appendHoverText(pStack, pWorld, tooltip, pIsAdvanced);
         }
     });
 
