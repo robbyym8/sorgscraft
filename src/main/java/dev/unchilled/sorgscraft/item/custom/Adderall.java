@@ -1,17 +1,16 @@
 package dev.unchilled.sorgscraft.item.custom;
 
-import net.minecraft.potion.Effects;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.DrinkHelper;
-import net.minecraft.util.Hand;
-import net.minecraft.world.World;
-import net.minecraft.potion.EffectInstance;
-
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.UseAction;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemUtils;
+import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.level.Level;
 
 public class Adderall extends Item {
 
@@ -19,14 +18,14 @@ public class Adderall extends Item {
         super(pProperties);
     }
 
-    public ItemStack finishUsingItem(ItemStack pStack, World pWorld, LivingEntity pEntityLiving) {
+    public ItemStack finishUsingItem(ItemStack pStack, Level pWorld, LivingEntity pEntityLiving) {
         if (!pWorld.isClientSide) {
-            pEntityLiving.forceAddEffect(new EffectInstance(Effects.MOVEMENT_SPEED, 12000, 1, true, false, false));
-            pEntityLiving.forceAddEffect(new EffectInstance(Effects.DIG_SPEED, 12000, 2, true, false, false));
-            pEntityLiving.forceAddEffect(new EffectInstance(Effects.REGENERATION, 12000, 1, true, false, false));
+            pEntityLiving.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 12000, 1, true, false, false));
+            pEntityLiving.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 12000, 2, true, false, false));
+            pEntityLiving.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 12000, 1, true, false, false));
         };
 
-        if (pEntityLiving instanceof PlayerEntity && !((PlayerEntity)pEntityLiving).abilities.instabuild) {
+        if (pEntityLiving instanceof Player && !((Player)pEntityLiving).getAbilities().instabuild) {
         pStack.shrink(1);
         }
 
@@ -37,12 +36,12 @@ public class Adderall extends Item {
         return 32;
     }
 
-    public UseAction getUseAnimation(ItemStack pStack) {
-        return UseAction.EAT;
+    public UseAnim getUseAnimation(ItemStack pStack) {
+        return UseAnim.EAT;
     }
 
-    public ActionResult<ItemStack> use(World pWorld, PlayerEntity pPlayer, Hand pHand) {
-        return DrinkHelper.useDrink(pWorld, pPlayer, pHand);
+    public InteractionResultHolder<ItemStack> use(Level pWorld, Player pPlayer, InteractionHand pHand) {
+        return ItemUtils.startUsingInstantly(pWorld, pPlayer, pHand);
     }
 
 }

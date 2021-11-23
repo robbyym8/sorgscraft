@@ -3,13 +3,13 @@ package dev.unchilled.sorgscraft.block;
 import dev.unchilled.sorgscraft.item.ModCreativeModeTab;
 import dev.unchilled.sorgscraft.item.ModItems;
 import dev.unchilled.sorgscraft.sorgscraft;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.block.Block;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.material.Material;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -20,7 +20,7 @@ public class ModBlocks<MOD_ID> {
             DeferredRegister.create(ForgeRegistries.BLOCKS, sorgscraft.MOD_ID);
 
 public static final RegistryObject<Block> GREASE_BLOCK = registerBlock("grease_block",
-        () -> new Block(AbstractBlock.Properties.of(Material.ICE).strength(4f)));
+        () -> new Block(BlockBehaviour.Properties.of(Material.ICE).strength(4f)));
 
     private static<T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

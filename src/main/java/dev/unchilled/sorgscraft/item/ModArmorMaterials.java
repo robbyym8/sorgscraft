@@ -2,14 +2,16 @@ package dev.unchilled.sorgscraft.item;
 import java.util.function.Supplier;
 
 import dev.unchilled.sorgscraft.sorgscraft;
-import net.minecraft.util.LazyValue;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.LazyLoadedValue;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.crafting.Ingredient;
 
-public enum ModArmorMaterials implements IArmorMaterial {
+@SuppressWarnings("deprecation")
+
+public enum ModArmorMaterials implements ArmorMaterial {
     GAP("gap", 37, new int[]{5, 7, 9, 3}, 12, SoundEvents.ARMOR_EQUIP_IRON, 1.0f, 0.0f, () -> {
         return Ingredient.of(ModItems.TOOTH_OF_THE_GOBLIN.get());
     });
@@ -22,7 +24,7 @@ public enum ModArmorMaterials implements IArmorMaterial {
     private final SoundEvent sound;
     private final float toughness;
     private final float knockbackResistance;
-    private final LazyValue<Ingredient> repairIngredient;
+    private final LazyLoadedValue<Ingredient> repairIngredient;
  
     private ModArmorMaterials(String p_40474_, int p_40475_, int[] p_40476_, int p_40477_, SoundEvent p_40478_, float p_40479_, float p_40480_, Supplier<Ingredient> p_40481_) {
        this.name = p_40474_;
@@ -32,14 +34,14 @@ public enum ModArmorMaterials implements IArmorMaterial {
        this.sound = p_40478_;
        this.toughness = p_40479_;
        this.knockbackResistance = p_40480_;
-       this.repairIngredient = new LazyValue<>(p_40481_);
+       this.repairIngredient = new LazyLoadedValue<>(p_40481_);
     }
 
-    public int getDurabilityForSlot(EquipmentSlotType pSlot) {
+    public int getDurabilityForSlot(EquipmentSlot pSlot) {
         return HEALTH_PER_SLOT[pSlot.getIndex()] * this.durabilityMultiplier;
     }
 
-    public int getDefenseForSlot(EquipmentSlotType pSlot) {
+    public int getDefenseForSlot(EquipmentSlot pSlot) {
         return this.slotProtections[pSlot.getIndex()];
     }
 

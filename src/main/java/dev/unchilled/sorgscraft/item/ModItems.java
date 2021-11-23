@@ -10,15 +10,15 @@ import dev.unchilled.sorgscraft.item.custom.Milk;
 import dev.unchilled.sorgscraft.item.custom.RobsHand;
 import dev.unchilled.sorgscraft.item.custom.Tinder;
 import dev.unchilled.sorgscraft.item.custom.Vape;
-import net.minecraft.world.World;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.item.Item;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -41,10 +41,10 @@ public class ModItems {
     public static final RegistryObject<Item> ADDERALL = ITEMS.register("adderall",
     () -> new Adderall(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB)) {
         @Override
-        public void appendHoverText(ItemStack pStack, World pWorld, List<ITextComponent> tooltip, ITooltipFlag pIsAdvanced) {
-        tooltip.add(new TranslationTextComponent("tooltip.item.sorgscraft.adderall"));
-        tooltip.add(new StringTextComponent(""));
-        tooltip.add(new TranslationTextComponent("tooltip.item.sorgscraft.adderall_effects"));
+        public void appendHoverText(ItemStack pStack, Level pWorld, List<Component> tooltip, TooltipFlag pIsAdvanced) {
+        tooltip.add(new TranslatableComponent("tooltip.item.sorgscraft.adderall"));
+        tooltip.add(new TextComponent(""));
+        tooltip.add(new TranslatableComponent("tooltip.item.sorgscraft.adderall_effects"));
         super.appendHoverText(pStack, pWorld, tooltip, pIsAdvanced);
         }
     });
@@ -52,8 +52,8 @@ public class ModItems {
     public static final RegistryObject<Item> TINDER = ITEMS.register("tinder",
     () -> new Tinder(new Item.Properties().tab(ModCreativeModeTab.SORGS_TAB).stacksTo(1).durability(3)) {
         @Override
-        public void appendHoverText(ItemStack pStack, World pWorld, List<ITextComponent> tooltip, ITooltipFlag pIsAdvanced) {
-        tooltip.add(new TranslationTextComponent("tooltip.item.sorgscraft.tinder"));
+        public void appendHoverText(ItemStack pStack, Level pWorld, List<Component> tooltip, TooltipFlag pIsAdvanced) {
+        tooltip.add(new TranslatableComponent("tooltip.item.sorgscraft.tinder"));
         super.appendHoverText(pStack, pWorld, tooltip, pIsAdvanced);
         }
     });

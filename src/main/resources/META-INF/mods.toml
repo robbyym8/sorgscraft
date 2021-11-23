@@ -4,7 +4,7 @@ license="GNU GPLv3"
 issueTrackerURL="https://sorgscraft.unchilled.dev/"
 [[mods]]
 modId="sorgscraft"
-version="1.16.5-0.0.4"
+version="1.17.1-0.0.4"
 displayName="SorgsCraft"
 updateJSONURL="https://sorgscraft.unchilled.dev/updates.json" 
 displayURL="https://sorgscraft.unchilled.dev" 
@@ -23,6 +23,6 @@ Adds members from the Discord along with special abilities, items, and blocks fr
 [[dependencies.sorgscraft]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5,1.17)"
+    versionRange="[1.17.1,1.18)"
     ordering="NONE"
     side="BOTH"
